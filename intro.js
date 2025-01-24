@@ -47,7 +47,7 @@ console.log(typeof(presentacionUno)); //El typeof(), me devuelve el tipo de dato
    que una variable no tiene ningún valor asignado y por otro lado el tipo undefined, señala que una
    variable tiene un valor asignado, no definido. */
 
-//Symbol: 
+//Symbol
 let simboloUnico = Symbol("unico");
 console.log(simboloUnico);
 /* OJO: El tipo symbol se usa para crear variables que tienen asignado como valor un “símbolo único” 
@@ -55,7 +55,7 @@ console.log(simboloUnico);
 
 //Complejos:
 
-//Objecto:
+//Objecto
 let carro = {
     marca: "Ford",
     modelo: "Mustang",
