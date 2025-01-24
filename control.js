@@ -60,7 +60,7 @@ switch(dia){          /* El input del switch matchea con el "case var" correspon
 
     default:
         console.log("No es un dia de la semana");
-}
+};
 
 //OJO: Puedes crear el numero de cases que necesites
 
@@ -74,7 +74,7 @@ var list = ["eat", "code", "sleep", "repeat"];
 
 for (var i = 0; i < list.length; i++){
     console.log(list[i]);
-}
+};
 
 //for of
 
@@ -82,7 +82,7 @@ for (var i = 0; i < list.length; i++){
 
 for (let palabra of list){
     console.log(palabra);
-}
+};
 
 
 //for in 
@@ -93,12 +93,12 @@ const personaje = {
     ataque: 3,
     defensa: 2,
     vida: 5 
-}
+};
 
 for (let atributo in personaje){
     personaje[atributo] = personaje[atributo] + 1;
     console.log(atributo + ": " + personaje[atributo]);
-}
+};
 
 /* OJO: La variable que se usa en el "for in" es una especie de indice asociado a los atributos de tu
         objeto. Para acceder al valor de algun atributo, debes desreferenciar su indice. */
@@ -110,7 +110,7 @@ let contador = 0;
 while(contador < 10){
     console.log(contador + 1);
     contador ++;
-}
+};
 
 //do while
 
