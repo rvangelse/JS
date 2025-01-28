@@ -166,5 +166,21 @@ console.log(verificar());      //Contexto Global
 
 //**************************************************************************************************************************************************************************/
 
-//Clousures
+//Closures (Son funciones internas que capturan parametros del ambito local de su funcion externa)
 
+function crearCajaDeAhorros() {
+    let dinero = 0; 
+  
+    return function agregarDinero(monto) {
+      dinero += monto;
+      console.log(`Tienes ahora $${dinero} en tu caja de ahorros.`); /* Clousure "agregarDinero", captura la variable
+                                                                        "dinero". */
+    };
+  };
+  
+  const miCaja = crearCajaDeAhorros();  
+  miCaja(50);  
+  miCaja(30);  
+
+/* OJO: El objetivo de usar closures es poder aislar la logica de una funcion y evitar que sus variables locales
+        sean modificadas. */
