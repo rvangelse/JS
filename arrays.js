@@ -111,4 +111,13 @@ console.log(frecuenciaPalabra);
 
 //Búsqueda de elementos con .find() y .findIndex()
 
-//.find()
+//.find() (Te devuelve el primer elemento de un array que cumple la condicion que le pasas como input)
+
+const numeroImpar = numeros.find(numero => numero % 2 == 1);
+console.log(numeroImpar);
+
+//.findIndex() (Te devuelve la posicion del primer elemento de un array que cumple la condicion que le pasas como input)
+
+const indiceNumeroImpar = numeros.findIndex(numero => numero % 2 == 1);
+console.log(indiceNumeroImpar);
+console.log(numeros[indiceNumeroImpar]);
