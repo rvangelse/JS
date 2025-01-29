@@ -121,7 +121,7 @@ perro2.correr();
 3. Si el usuario y contraseña son correctos, el sistema debe mostrar un mensaje de bienvenida y mostrar el timeline del usuario.
 4. Si el usuario y contraseña son incorrectos, el sistema debe mostrar un mensaje de error y no mostrar ningun timeline. */
 
-//Defino un array que usare como base de datos
+//Defino un array de objetos que usare como base de datos
 const baseDeDatos = [
     {
       usuario: "rvangelse",
@@ -133,8 +133,8 @@ const baseDeDatos = [
     }
   ];
 
-//Defino otro array que usare como linea de tiempo
-  const lineaDeTiempo = [
+//Defino otro array de objetos que usare como linea de tiempo
+  const posts = [
     {
       usuario: "Angel",
       post: "Me encata Javascript!",
@@ -151,6 +151,7 @@ const baseDeDatos = [
   const usuario = input("Usuario: ");
   const contraseña = input("Contraseña: ");
   
+  //Funcion que verifica si un usuario y contraseña existen en la base de datos
   function usuarioExistente(usuario, contraseña) {
     for (let i = 0; i < baseDeDatos.length; i++) {
       if (
@@ -166,7 +167,7 @@ const baseDeDatos = [
   function inicioSesion(usuario, contraseña) {
     if (usuarioExistente(usuario, contraseña)) {
       console.log(`¡Bienvenido a tu cuenta ${usuario}!`);
-      console.log(lineaDeTiempo);
+      console.log(posts);
     } else {
       console.log("Usuario o contraseña incorrectos!");
     }
