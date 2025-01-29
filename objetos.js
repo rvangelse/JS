@@ -12,7 +12,7 @@ let personaje = {
     arma: "Escopeta",
     mostrarInformacion: function(){   //Esto es un metodo, una funcion que permite interactuar con el objeto
         console.log("Nombre: " + this.nombre);
-        console.log("Edad: " + this.edad);
+        console.log("Edad: " + this.edad); //OJO: Para hacer referencia a la instancia/objeto actual usamos el "this." 
         console.log("Arma: " + this.arma);
     }
 };
@@ -38,18 +38,140 @@ function persona (nombre, apellido, edad){
         console.log("Apellido: " + this.apellido);
         console.log("Edad: " + this.edad);
     }
-}
+};
 
 const persona1 = new persona ("Juan", "Perez", 21);
 persona1.mostrarInformacion();
 
-persona.prototype.nacionalidad = "ecuatoriana"; /* El prototype me permite heredarles atributos/metodos a todas 
-                                                   las instancias de la funcion constructora, sin que estos se 
-                                                   vean reflejados en su estructura. */
+persona.prototype.nacionalidad = "ecuatoriana"; /* Al modificar el prototype estoy modificando la herencias de 
+                                                   todas las instancias de la funcion constructora, sin que esto 
+                                                   se vea reflejado en su estructura. */
                                                   
 console.log(persona1.nacionalidad);
 console.log(persona1);
 
 //**************************************************************************************************************************************************************************/
 
-//¿Qué es una clase?  (Clase > Objeto > Instancia)
+//¿Qué es una clase? //Esta es una forma mas optima de construir objetos nuevos (instancias)
+class Personaje {
+    constructor(nombre){
+        this.nombre = nombre;
+    };
+    mostrarInformacion(){
+        console.log("Nombre: " + this.nombre);
+    };
+};
+
+const personaje1 = new Personaje ("Pilo");
+personaje1.mostrarInformacion();
+
+//**************************************************************************************************************************************************************************
+
+//Herencia en la práctica
+class Animal {
+    constructor(nombre, tipo){
+        this.nombre = nombre;
+        this.tipo = tipo;
+    };
+    emitirSonido(){
+        console.log("El animal emite un sonido");
+    };
+};
+
+class Perro extends Animal {
+    constructor(nombre, tipo, raza){
+        super(nombre, tipo); //Estoy usando el constructor heredado de la clase padre "Animal"
+        this.raza = raza;
+    };
+    emitirSonido(){  //Sobreescribo el metodo heredado de la clase padre "Animal"
+        console.log("El perro ladra");
+    };
+};
+
+const perro = new Perro("Buddy", "Canino", "Golden Retriever");
+console.log(perro);
+perro.emitirSonido();
+
+//**************************************************************************************************************************************************************************
+
+//Prototipos en la practica
+
+/* OJO: Las clases/funciones constructoras son las unicas que generan prototipos.
+        Un prototipo es la "herencia" en si. */
+
+const perro2 = new Perro("Pipo", "Canino", "Chihuahua");
+
+//Le cree un metodo personalizado a esta instancia
+perro2.emitirSonido = function emitirSonido(){console.log("El perro ladra mas fuerte")}; 
+perro2.emitirSonido();
+
+//Le añadi un nuevo metodo a la herencia de todas las instancias de la clase "Perro"
+Perro.prototype.correr = function correr(){console.log("El perro corre");};
+perro.correr();
+perro2.correr();
+
+//**************************************************************************************************************************************************************************
+
+//Proyecto: Crea una red Social
+
+/* Requerimientos del reto:
+
+1. El usuario debe poder ingresar su usuario y contraseña
+2. El sistema debe ser capaz de validar si el usuario y contraseña ingresados por el usuario existen en la base de datos
+3. Si el usuario y contraseña son correctos, el sistema debe mostrar un mensaje de bienvenida y mostrar el timeline del usuario.
+4. Si el usuario y contraseña son incorrectos, el sistema debe mostrar un mensaje de error y no mostrar ningun timeline. */
+
+//Defino un array que usare como base de datos
+const baseDeDatos = [
+    {
+      usuario: "rvangelse",
+      contraseña: "123",
+    },
+    {
+      usuario: "jdoe",
+      contraseña: "456",
+    }
+  ];
+
+//Defino otro array que usare como linea de tiempo
+  const lineaDeTiempo = [
+    {
+      usuario: "Angel",
+      post: "Me encata Javascript!",
+    },
+    {
+      usuario: "Andres",
+      post: "No quiero trabajar",
+    }
+  ];
+
+  //OJO: Use este comando "npm install prompt-sync" para instalar el paquete que me permitio agregar inputs.
+  const input = require("prompt-sync")({ sigint: true });
+
+  const usuario = input("Usuario: ");
+  const contraseña = input("Contraseña: ");
+  
+  function usuarioExistente(usuario, contraseña) {
+    for (let i = 0; i < baseDeDatos.length; i++) {
+      if (
+        baseDeDatos[i].usuario === usuario &&
+        baseDeDatos[i].contraseña === contraseña
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  function inicioSesion(usuario, contraseña) {
+    if (usuarioExistente(usuario, contraseña)) {
+      console.log(`¡Bienvenido a tu cuenta ${usuario}!`);
+      console.log(lineaDeTiempo);
+    } else {
+      console.log("Usuario o contraseña incorrectos!");
+    }
+  }
+  
+  inicioSesion(usuario, contraseña);
+
+
