@@ -121,3 +121,41 @@ console.log(numeroImpar);
 const indiceNumeroImpar = numeros.findIndex(numero => numero % 2 == 1);
 console.log(indiceNumeroImpar);
 console.log(numeros[indiceNumeroImpar]);
+
+//**************************************************************************************************************************************************************************/
+
+//Crear copias con .slice()
+
+const animales = ["hormiga", "vaca", "pato", "perro", "gato"];
+const animales2 = animales.slice(); //Crea una copia completa del array original
+const animalesCopia = animales.slice(0, 3); //No incluye el indice del final, es decir, aqui copia del indice 0 al 2.
+const animalesCopia2 = animales2.slice(-2); //Cuenta del ultimo al primero (Forma inversa) 
+//OJO: Puedes pasarle solo un parametro, hara referencia al final del intervalo
+
+console.log(animales);
+console.log(animales2);
+console.log(animalesCopia);
+console.log(animalesCopia2);
+
+//**************************************************************************************************************************************************************************/
+
+//Spread operator: casos de uso
+
+//Crear copia de un array
+
+const animales3 = [...animales];
+console.log(animales3);
+
+//Combinar arrays y agregar elementos
+
+const animales4 = [...animales, "elefante",...animales2];
+console.log(animales4);
+
+//Pasar argumentos como arrays a funciones
+function suma(a, b, c, d) {
+    return a + b + c + d;
+};
+
+console.log(suma(...numeros));
+
+
