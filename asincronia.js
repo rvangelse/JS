@@ -66,6 +66,41 @@ fetchDataAsync();
 
 //**************************************************************************************************************************************************************************/
 
-//For await of
+//For await of (Sirve para hacer mas de una peticion de forma asincrona)
+
+const urls = ["https://rickandmortyapi.com/api/character", 
+              "https://rickandmortyapi.com/api/location",
+              "https://rickandmortyapi.com/api/episode"];
+
+async function fetchNewData(){
+    try {
+        for await (let url of urls) {
+          let response = await fetch(url);
+          let data = await response.json();
+          console.log(data);
+        }
+    } catch (error){
+        console.log(error);
+    }
+}
+
+fetchNewData();
+
+//**************************************************************************************************************************************************************************/
+
+//Verbos de HTTP (Hypertext Transfer Protocol) 
+
+//GET (Obtener informacion)
+
+//POST (Toma la informacion y la comparte)
+
+//PATCH y PUT (Actualiza la informacion que ya existe)
+
+//Delete (Borra la informacion)
+
+
+
+
+
 
 
