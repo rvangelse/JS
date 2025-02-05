@@ -88,15 +88,17 @@ fetchNewData();
 
 //**************************************************************************************************************************************************************************/
 
-//Verbos de HTTP (Hypertext Transfer Protocol) 
+//HTTP (Hypertext Transfer Protocol)
 
-//GET (Obtener informacion)
+/* Verbos de HTTP
 
-//POST (Toma la informacion y la comparte)
+   - GET (Obtener informacion)
 
-//PATCH y PUT (Actualiza la informacion que ya existe)
+   - POST (Toma la informacion y la comparte)
 
-//Delete (Borra la informacion)
+   - PATCH y PUT (Actualiza la informacion que ya existe)
+
+   - Delete (Borra la informacion) */
 
 
 
