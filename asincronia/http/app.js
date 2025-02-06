@@ -60,5 +60,35 @@ fetchButton.addEventListener("click", fetchPosts); //Añado funcionalidad al bot
 //**************************************************************************************************************************************************************************/
 
 //Método POST en JavaScript (Envia informacion a un servidor)
+async function createPost(title, content){
+   const userId = Math.random();
+   const post = {
+      title: title,
+      body: content,
+      userId: userId,
+   };
+   sendHTTPRequest("POST", "https://jsonplaceholder.typicode.com/posts", post); //Envio el post al servidor
+}
 
+form.addEventListener("submit", (event) => { //Añado funcionalidad al boton "Post content"
+   event.preventDefault(); //Arregla un bug 
+   const title = event.currentTarget.querySelector("#title").value;
+   const content = event.currentTarget.querySelector("#content").value;
 
+   createPost(title, content);
+});
+
+//**************************************************************************************************************************************************************************/
+
+//Método DELETE en JavaScript (Borra informacion)
+postList.addEventListener("click", (event) => { //Me traigo al evento
+   console.log(event); 
+   if (event.target.tagName === "BUTTON") { //Me fijo si estoy clickeando un boton
+     const postId = event.target.closest("article").id; //Extraigo el id del post de ese boton
+     console.log(postId);
+     sendHTTPRequest(
+       "DELETE",
+       `https://jsonplaceholder.typicode.com/posts/${postId}`
+     ); //Elimino el post que tiene ese id
+   }
+ });
