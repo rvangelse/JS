@@ -50,18 +50,13 @@ Cada tema cuenta con ejemplos prácticos y explicaciones detalladas. Puedes clon
 
 ```sh
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/fundamentos-js.git
+git clone https://github.com/rvangelse/JS.git
 
-# Acceder al directorio
-cd fundamentos-js
-
-# Abrir en tu editor de código favorito
-code .
 ```
 
 ## Contribuciones
 
 Si deseas contribuir con ejemplos o mas contenido, siéntete libre de hacer un fork del repositorio y enviar un pull request.
 
-¡Espero que este contenidocsea útil! 
+¡Espero que este contenido sea útil! 
 
