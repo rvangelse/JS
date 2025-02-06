@@ -18,7 +18,7 @@
 
 //Promesas en JavaScript
 
-/* Una promesa es una peticion que se le envia a la Web API.
+/* Una promesa es un objeto que representa la eventual finalización (o falla) de una operación asíncrona.
    Tienen 3 estados: 
    - Pending: La promesa aun no ha sido resuelta o rechazada.
    - Fulfilled: La promesa ha sido resuelta con un valor.

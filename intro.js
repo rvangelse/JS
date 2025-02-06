@@ -16,7 +16,7 @@ console.log("Hola, mundo");
 //¿Como declarar variables, constantes y asignar valores?
 //OJO: Es una buena practica declarar las variables y constantes al inicio del programa, individualmente. 
 var nombre = "Angel";                  
-let edad = 22; //let a diferencia de var, declara una variable local
+let edad = 22; //let a diferencia de var, declara una variable local (Esta es la forma mas optima)
 const añoDeNacimiento = 2002;
 
 let presentacion1 = "Mi nombre es " + nombre;
