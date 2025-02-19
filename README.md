@@ -4,7 +4,7 @@ Repositorio sobre los fundamentos de JavaScript.
 
 ## Temario
 
-1. **Introducción a JavaScript**  
+1. [**Introducción a JavaScript**][intro.js]  
    - ¿Como declarar variables, constantes y asignarles valores? 
    - Tipos de datos  
    - Conversion de Tipos   
