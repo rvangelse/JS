@@ -1,6 +1,6 @@
 # Fundamentos de JavaScript
 
-Repositorio sobre los fundamentos de JavaScript. 
+Apuntes sobre los fundamentos de JavaScript 
 
 ## Temario
 
