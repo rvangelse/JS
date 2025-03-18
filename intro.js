@@ -2,17 +2,6 @@
 
 //**************************************************************************************************************************************************************************/
 
-//Instalacion de nodeJS
-
-/* Instalas nodeJS en Linux con los siguientes comandos: sudo apt install nodejs y sudo apt install npm
-   OJO: Ejecutas un archivo JS desde la terminal, usando el comando “node <nombre del archivo>” 
-   OJO: JavaScript es un lenguaje interpretado */
-
-//**************************************************************************************************************************************************************************/
-
-//¿Como imprimir mensajes en consola?
-console.log("Hola, mundo");
-
 //¿Como declarar variables, constantes y asignar valores?
 //OJO: Es una buena practica declarar las variables y constantes al inicio del programa, individualmente. 
 var nombre = "Angel";                  

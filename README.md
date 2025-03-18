@@ -4,10 +4,9 @@ Apuntes sobre los fundamentos de JavaScript
 
 ## Temario
 
-1. [**Introducción a JavaScript**](intro.js)  
-   - ¿Como declarar variables, constantes y asignarles valores? 
-   - Tipos de datos  
-   - Conversion de Tipos   
+1. [**Introducción a JavaScript**](intro.md)  
+   - [Instalación de NodeJS](intro.md#instalación-de-nodejs) 
+   - [Hola, mundo!](intro.md#hola-mundo)  
 
 2. [**Estructuras de Control y Lógica**](control.js)  
    - Operadores de comparación  
