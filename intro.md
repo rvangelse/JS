@@ -1,7 +1,7 @@
 # Introducción a JavaScript
 JavaScript es un lenguaje de programación interpretado utilizado en la creación de sitios web y aplicaciones móviles. 
 
-Se usa principalmente para añadir `funcionalidades dinámicas e interactivas` a las páginas web, como animaciones, formularios interactivos, etc.
+Se usa principalmente para añadir funcionalidades `dinámicas` e `interactivas` a las páginas web, como animaciones, formularios interactivos, etc.
 
 ## Instalación de NodeJS
 
