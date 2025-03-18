@@ -1,3 +1,5 @@
+# Variables y tipos de datos
+```js
 //**Intoduccion a JavaScript**
 
 //**************************************************************************************************************************************************************************/
@@ -107,3 +109,4 @@ const resSumaString = "3" + 2; //Convierte el number a string y lo concatena
 console.log(resSumaString);
 const resSumaBool = 7 + true; //Convierte al boolean en number (1) y los suma
 console.log(resSumaBool); 
+```
