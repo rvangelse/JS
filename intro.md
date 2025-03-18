@@ -16,6 +16,6 @@ OJO: Ejecutas un archivo JS desde la terminal, usando el comando `node <nombre d
 
 ## Hola, mundo!
 ```js
-//¿Como imprimir mensajes en consola?
+//¿Cómo imprimir mensajes en consola?
 console.log("Hola, mundo!");
 ```
