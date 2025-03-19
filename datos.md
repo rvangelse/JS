@@ -1,18 +1,28 @@
 # Variables y tipos de datos
+
+## Variables
+
 ```js
-//**Intoduccion a JavaScript**
+//Forma clásica de declarar una variable y asignarle un valor           
+var nombre = "Angel"; 
 
-//**************************************************************************************************************************************************************************/
+//let a diferencia de var, declara una variable local (Esta es la forma moderna y más optima)
+let edad = 22; 
 
-//¿Como declarar variables, constantes y asignar valores?
-//OJO: Es una buena practica declarar las variables y constantes al inicio del programa, individualmente. 
-var nombre = "Angel";                  
-let edad = 22; //let a diferencia de var, declara una variable local (Esta es la forma mas optima)
-const añoDeNacimiento = 2002;
+const añoDeNacimiento = 2002; //Constante
 
 let presentacion1 = "Mi nombre es " + nombre;
 let presentacion2 = "y naci en el año " + añoDeNacimiento;
+```
+OJO: Es una buena práctica declarar las variables y constantes al `inicio` del programa, individualmente.
 
+OJO: Estas son las [palabras reservadas](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Lexical_grammar#palabras_clave) por JS.
+
+OJO: Evita el uso indiscriminado de variables globales, opta por `variables locales` dentro de las funciones siempre que sea posible. 
+
+## Texto
+
+```JS
 //Trucos con strings
 let presentacionUno = `${presentacion1} ${presentacion2}`; //Util para concatenar strings
 let presentacionDos = presentacion1 + " " + presentacion2; //Otra forma de concatenar strings

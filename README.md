@@ -9,6 +9,8 @@ Apuntes sobre los fundamentos de JavaScript
    - [Hola, mundo!](intro.md#hola-mundo)
 
 2. [**Variables y tipos de datos**](datos.md)
+   - [Variables](datos.md#variables)
+   - [Texto](datos.md#texto)
 
 3. [**Estructuras de Control y Lógica**](control.js)  
    - Operadores de comparación  
