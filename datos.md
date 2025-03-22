@@ -348,5 +348,5 @@ console.log(`Se encontró el patrón 'lluvia' en el texto: 'La lluvia en Sevilla
 
 **Output**
 <p align="center">
-  <img src="imagenes/grafico1.png" width="500">
+  <img src="imagenes/grafico1.png" width="800">
 </p>
