@@ -22,19 +22,31 @@ OJO: Evita el uso indiscriminado de variables globales, opta por `variables loca
 
 ## Texto
 
-```JS
-//Trucos con strings
-let presentacionUno = `${presentacion1} ${presentacion2}`; //Util para concatenar strings
-let presentacionDos = presentacion1 + " " + presentacion2; //Otra forma de concatenar strings
+```js
+//Concatenación 
+//Forma 1
+let presentacionUno = `${presentacion1} ${presentacion2}`; 
+//Forma 2
+let presentacionDos = presentacion1 + " " + presentacion2; 
 console.log(presentacionUno);
 
-console.log(presentacionUno.toLowerCase()); //El metodo .toLowerCase(), convierte todo a minuscula
-console.log(presentacionDos.toUpperCase()); // "      " .toUpperCase(), "          "   a mayuscula
-console.log("La frase de arriba esta compuesta por " + presentacionDos.length + " caracteres"); // El metodo .length, devuelve la longitud del string
-console.log(presentacionDos.substring(13, 18)); //El  metodo .substring(), arma substrings. OJO: El inicio es no inclusivo, queria tomar desde el char 14 al 18
+//Conversión a minúsculas
+console.log(presentacionUno.toLowerCase()); 
 
-//**************************************************************************************************************************************************************************/
+//Conversión a mayúsculas
+console.log(presentacionDos.toUpperCase()); 
 
+//Longitud 
+console.log("La frase de arriba esta compuesta por " + presentacionDos.length + " caracteres");
+
+//Armar substrings
+console.log(presentacionDos.substring(13, 18)); 
+//OJO: El inicio es no inclusivo, queria tomar desde el char 14 al 18
+```
+OJO: `\` sirve para que JS renderice un carácter como texto. 
+Por otro lado `\n` sirve para crear un salto de línea.
+
+```JS
 //Tipos de datos
 /* JavaScript es un lenguaje tipado dinámicamente (Tipado debil), por lo que no tienes que especificar 
    el tipo de dato de una variable cuando la declaras. 
