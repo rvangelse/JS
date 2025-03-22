@@ -18,7 +18,8 @@ Apuntes sobre los fundamentos de JavaScript
    - [Tipos de datos](datos.md#tipos-de-datos)
    - [Práctica 1: Variables y tipos de datos en JS](datos.md#práctica-1-variables-y-tipos-de-datos-en-js)
 
-3. [**Estructuras de Control y Lógica**](control.js)  
+3. [**Estructuras de Control y Lógica**](control.md)
+   - [Operadores](control.md#operadores)
    - Operadores de comparación  
    - Operadores logicos 
    - Condicionales (`if`, `else`, `switch`)  
