@@ -96,3 +96,5 @@ console.log(`10 módulo 3: ${array1[0] % array2[3]}`);
 <p align="center">
   <img src="imagenes/grafico2.png" width="800">
 </p>
+
+## Condicionales 
