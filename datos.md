@@ -323,6 +323,40 @@ console.log(resSumaBool);
 ```
 OJO: La diferencia entre el tipo `null` y el tipo `undefined` es que usamos el tipo null para señalar que una variable no tiene `ningún` valor asignado y por otro lado el tipo undefined, señala que una variable tiene un valor asignado, `no definido`.
 
+## Valor vs Referencia
+
+### Pasaje por copia/valor
+
+En JS, los tipos de `datos primitivos` (number, string, boolean, symbol, null, undefined) se pasan por `valor`. 
+
+Esto significa que cuando se asigna un valor a una variable, se crea una copia del valor y la variable apunta a esa copia en la memoria.
+
+Ejemplo:
+```js
+let x = 10;
+
+let y = x;
+
+x = 20;
+
+console.log(y); // 10 (el valor de y no cambió porque es una copia de x)
+```
+### Pasaje por referencia
+En JS, los `objetos` (arrays, functions y objects) se pasan por `referencia`. 
+
+Esto significa que cuando se asigna un objeto a una variable, la variable no apunta al objeto en sí, sino a su ubicación en la memoria.
+
+Ejemplo: 
+```js 
+let a = {valor: 10};
+
+let b = a;
+
+a.valor = 20;
+
+console.log(b.valor); // 20 (el valor de b.valor si cambió porque a y b son el mismo objeto en la memoria)
+```
+
 ## Práctica 1: Variables y tipos de datos en JS 
 
 **Código**

@@ -13,9 +13,10 @@ Apuntes sobre los fundamentos de JavaScript
    - [Strings y sus métodos](datos.md#texto)
    - [Numbers](datos.md#número)
    - [Arrays y sus métodos](datos.md#arrays-y-sus-métodos)
-   - [Expresiones regulares(Regex)](datos.md#expresiones-regulares-regex)
+   - [Expresiones regulares (Regex)](datos.md#expresiones-regulares-regex)
    - [Objetos](datos.md#objetos)
    - [Tipos de datos](datos.md#tipos-de-datos)
+   - [Valor vs Referencia](datos.md#valor-vs-referencia)
    - [Práctica 1: Variables y tipos de datos en JS](datos.md#práctica-1-variables-y-tipos-de-datos-en-js)
 
 3. [**Estructuras de Control y Lógica**](control.md)
