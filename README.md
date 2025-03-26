@@ -21,6 +21,7 @@ Apuntes sobre los fundamentos de JavaScript
 
 3. [**Estructuras de Control y Lógica**](control.md)
    - [Operadores](control.md#operadores)
+   - [Práctica 2: Operadores en JS](control.md#práctica-2-operadores-en-js)
    - Condicionales (`if`, `else`, `switch`)  
    - Loops (`for`, `while`, `do while`)  
 
