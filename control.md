@@ -49,3 +49,50 @@ let d = c;
 console.log(c == d); // true
 console.log(c === d); // true
 ```
+### Operadores aritméticos
+```js
+console.log(3 + 4); //suma
+console.log(3 - 4); //resta
+console.log(3 * 4); //multiplicación 
+console.log(12 / 4); //división
+console.log(12 % 7); //módulo
+
+//Trucos
+//Todo esto es lo mismo, escrito de otra forma:
+let a = 10;
+a = a + 1;
+//Importa el orden de los operadores, suman y luego asignan
+a += 1; 
+++a; 
+```
+### Operadores lógicos
+```js
+a == b || a == c; 
+a == c && a != b; 
+a == c && !(a == b); //El operador ! es la negación
+```
+## Práctica 2: Operadores en JS
+
+**Código**
+```js
+array1 = [10, 1, "texto 1"];
+array2 = [5, 2, "texto 2", 3];
+
+console.log(`¿El número 10 es mayor que el número 5? ${array1[0] > array2[0]}`);
+console.log(`¿El número 10 es menor que el número 5? ${array1[0] < array2[0]}`);
+console.log(`¿El número 1 es igual al número2? ${array1[1] == array2[1]}`);
+console.log(`¿El texto 1 es igual al texto 2? ${array1[2] == array2[2]}`);
+console.log(`¿Los objetos son iguales? ${array1 == array2}`);
+console.log(`AND lógico: ${(array1[0]>array2[0]) && (array1[0]<array2[0])}`);
+console.log(`OR lógico: ${(array1[0]>array2[0]) || (array1[0]<array2[0])}`);
+console.log(`La suma de 10 + 3: ${array1[0] + array2[3]}`);
+console.log(`La resta de 10 - 3: ${array1[0] - array2[3]}`);
+console.log(`La multiplicación de 10 * 3: ${array1[0] * array2[3]}`);
+console.log(`La división de 10 / 3: ${array1[0] / array2[3]}`);
+console.log(`10 módulo 3: ${array1[0] % array2[3]}`);
+```
+
+**Output**
+<p align="center">
+  <img src="imagenes/grafico2.png" width="800">
+</p>
