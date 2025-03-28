@@ -140,7 +140,7 @@ switch(dia){
 ```
 OJO: Puedes crear el número de `cases` que necesites.
 
-### Ternario 
+### Ternarios 
 
 ```js
 let numero = 3;
