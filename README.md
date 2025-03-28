@@ -32,23 +32,14 @@ Apuntes sobre los fundamentos de JavaScript
    - Contextos de ejecución y scope chain
    - Closures  
 
-5. [**Manipulación de Arrays**](arrays.js)
-   - Introducción a Arrays
-   - Mutabilidad e inmutabilidad de Arrays
-   - Iteración con `.map()` y `.forEach()`
-   - Filtrado y reducción con `.filter()` y `.reduce()` 
-   - Búsqueda de elementos con `.find()` y `.findIndex()`
-   - Crear copias con `.slice()`
-   - Spread operator: casos de uso 
-
-6. [**Programación Orientada a Objetos**](objetos.js)  
+5. [**Programación Orientada a Objetos**](objetos.js)  
    - Anatomía de un Objeto  
    - Función constructora
    - ¿Qué es una clase?
    - Herencia en la práctica
    - Prototipos en la practica 
 
-7. [**Asincronía en JavaScript**](asincronia/asincronia.js)  
+6. [**Asincronía en JavaScript**](asincronia/asincronia.js)  
    - Promesas en JavaScript  
    - Usando `async` y `await` en JavaScript  
    - `For await of`

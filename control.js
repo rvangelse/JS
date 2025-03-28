@@ -2,51 +2,6 @@
 
 //**************************************************************************************************************************************************************************/
 
-//Condicionales
-
-//Condicional if
-
-let numeroAleatorio = (Math.random() * 10).toFixed(0); 
-/* El metodo Math.random() genera flotantes aleatorios, la mayoria de veces entre 0 y 1, 
-   para modificar eso, hice lo de arriba. Con esto, obtengo enteros aleatorios entre 0 y 10. */
-
-if (numeroAleatorio >= 4) {
-    console.log("El numero es " + numeroAleatorio + " y es mayor o igual que 4");
-}else if (numeroAleatorio >= 2) { 
-    console.log("El numero es " + numeroAleatorio + " y es mayor o igual que 2");
-}else {
-    console.log("El numero es " + numeroAleatorio + " y es menor que 2");
-}
-//OJO: El "else if" se puede omitir, solo se usa si hay mas de 1 condicion.
-
-//Condicional switch
-
-let dia = "Viernes";
-
-switch(dia){          /* El input del switch matchea con el "case var" correspondiente, 
-                         el matcheo esta implementado asi, "input === var". */
-    
-    case "Lunes":
-    case "Martes":
-    case "Miércoles":
-    case "Jueves":
-        console.log("No es fin de semana");
-        break;
-
-    case "Viernes":
-    case "Sabado":
-    case "Domingo":
-        console.log("Es fin de semana");
-        break;
-
-    default:
-        console.log("No es un dia de la semana");
-};
-
-//OJO: Puedes crear el numero de cases que necesites
-
-//**************************************************************************************************************************************************************************/
-
 //Loops
 
 //for
