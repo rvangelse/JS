@@ -25,6 +25,7 @@ Apuntes sobre los fundamentos de JavaScript
    - [Condicionales](control.md#condicionales)
    - [Práctica 3: Condicionales en JS](control.md#práctica-3-condicionales-en-js)  
    - [Bucles](control.md#bucles)
+   - [Práctica 4: Bucles en JS](control.md#práctica-4-bucles-en-js)
 
 4. [**Funciones y `this`**](funciones.js)  
    - Funciones vs Metodos 
