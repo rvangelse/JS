@@ -283,7 +283,7 @@ let numero = 1;
 while(numero**2 < 100){
     numero ++;
 }
-console.log(`El número más cercano a 100 cuyo cuadrdo es menor 100 es: ${numero}`);
+console.log(`El número más cercano a 100 cuyo cuadrado es menor 100 es: ${numero}`);
 console.log("----------------------------");
 
 let numero2 = 1; 
