@@ -175,3 +175,126 @@ console.log(resultado);
 <p align="center">
   <img src="imagenes/grafico3.png" width="800">
 </p>
+
+## Bucles
+Te `ahorran tiempo` cuando necesitas realizar un `procedimiento` a `varios elementos`.
+
+### for 
+```js
+let list = ["eat", "code", "sleep", "repeat"];
+
+for (let i = 0; i < list.length; i++){
+    console.log(list[i]);
+}
+
+//Otro ejemplo:
+let lista = ['gato', 'perro', 'elefante', 'dinosaurio', 'tortuga'];
+
+for (let i = 0; i < lista.length; i++) {
+    let animal = lista[i];
+
+    if (animal === 'dinosaurio') {
+        continue;
+    }
+    console.log('animal vivo: ' + animal);
+}
+```
+**Variante: for of**
+
+Se usa sobre `objetos iterables`, es decir, poseen índices, por ejemplo: arrays, strings, etc.
+ ```js
+const lista = ['manzana', 'naranja', 'uva'];
+
+for (const elemento of lista){
+    console.log(elemento);
+}
+```
+**Variante: for in**
+
+Se usa sobre `objetos innumerables`, es decir, no poseen índices por ejemplo: objects.
+
+```js
+let traductor = {
+    bucle: 'loop',
+    lista: 'array',
+    declaración: 'declaration',
+    objecto: 'object'
+};
+
+for (let etiqueta in traductor) {
+    console.log(etiqueta + ' en inglés es ' + traductor[etiqueta]);
+}
+```
+OJO: La `variable` que se usa en el `for in` es una especie de `indice asociado` a los atributos de tu objeto. Para acceder al valor de algun atributo, debes `desreferenciar` su indice.
+
+### while
+
+Lo usamos cuando `no sabemos cuantas veces` tendremos que repetir algo. 
+
+```js
+let lista = [3,6,4,8,2,9,4,7,6,1,0,33,8,9,3,546,7,87];
+
+let numero = 0;
+while (numero < 30) {
+    numero = lista.shift();
+    console.log(numero);
+}
+console.log(lista);
+```
+**Variante: do while**
+
+La diferencia del `do while` con el `while` es que este se ejecutara `al menos una vez`, sin importar la validez de la condición. 
+
+```js
+let i = 0;
+
+do {
+    console.log('una vez');
+    i++;
+} while (i < 4);
+```
+## Práctica 4: Bucles en JS
+
+**Código**
+
+```js
+for (let i = 1; i < 6; i++){
+    console.log(i);
+}
+console.log("----------------------------");
+
+let colores = ["rojo", "verde", "azul", "amarillo"];
+for (color of colores){
+    console.log(color);
+}
+console.log("----------------------------");
+
+let persona = {
+    nombre: "María",
+    edad: 27,
+    profesión: "diseñadora"
+}
+for (atributo in persona){
+    console.log(`${atributo}: ${persona[atributo]}`);
+} 
+console.log("----------------------------");
+
+let numero = 1;
+while(numero**2 < 100){
+    numero ++;
+}
+console.log(`El número más cercano a 100 cuyo cuadrdo es menor 100 es: ${numero}`);
+console.log("----------------------------");
+
+let numero2 = 1; 
+do {
+    if (numero2 % 2 === 0){
+        console.log(numero2);
+    }
+    numero2 ++;
+} while (numero2 <= 10);
+```
+**Output**
+<p align="center">
+  <img src="imagenes/grafico4.png" width="800">
+</p>

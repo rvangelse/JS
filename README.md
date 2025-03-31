@@ -24,7 +24,9 @@ Apuntes sobre los fundamentos de JavaScript
    - [Práctica 2: Operadores en JS](control.md#práctica-2-operadores-en-js)
    - [Condicionales](control.md#condicionales)
    - [Práctica 3: Condicionales en JS](control.md#práctica-3-condicionales-en-js)  
-   - Loops (`for`, `while`, `do while`)  
+   - [Bucles](control.md#bucles)
+   
+   
 
 4. [**Funciones y `this`**](funciones.js)  
    - Funciones vs Metodos 
