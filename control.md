@@ -295,6 +295,3 @@ do {
 } while (numero2 <= 10);
 ```
 **Output**
-<p align="center">
-  <img src="imagenes/grafico4.png" width="800">
-</p>
