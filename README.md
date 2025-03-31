@@ -26,9 +26,7 @@ Apuntes sobre los fundamentos de JavaScript
    - [Práctica 3: Condicionales en JS](control.md#práctica-3-condicionales-en-js)  
    - [Bucles](control.md#bucles)
    
-   
-
-4. [**Funciones y `this`**](funciones.js)  
+4. [**Funciones y `this`**](funciones.md)  
    - Funciones vs Metodos 
    - Funciones puras e impuras  
    - Funciones arrow y enlace léxico
