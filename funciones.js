@@ -50,25 +50,6 @@ contar();
 contar();  
 contar();  
 
-//Metodos (Son funciones asociadas a un objeto específico)
-
-const rocket = {
-    name: "Falcon 9",
-    conteo: function conteo(){
-        for (let i = 5; i >= 0; i--) {
-            console.log("Lanzamiento en " + i);
-            
-            if (i == 0){
-                console.log('🔥🔥LANZAMIENTO!!!!!!!!!!!!!!!!!!!');
-                
-            }
-            
-        }
-    }
-}
-
-rocket.conteo();
-
 //**************************************************************************************************************************************************************************/
 
 //Funciones puras e impuras

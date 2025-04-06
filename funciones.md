@@ -60,14 +60,22 @@ console.log(usuario);
 Son funciones asociadas a un objeto específico.
 
 ```js
-let perro = {
-    nombre: 'Firulais',
-    ladra: function() {
-        console.log('Woof!');
+let rocket = {
+    name: "Falcon 9",
+    conteo: function conteo(){
+        for (let i = 5; i >= 0; i--) {
+            console.log("Lanzamiento en " + i);
+            
+            if (i == 0){
+                console.log('🔥🔥LANZAMIENTO!!!!!!!!!!!!!!!!!!!');
+                
+            }
+            
+        }
     }
-};
+}
 
-perro.ladra();
+rocket.conteo();
 ```
 ## Ambito
 ```js
