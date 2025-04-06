@@ -25,6 +25,8 @@ OJO: Las `declaraciones` de funciones se cargan antes de que se ejecute cualquie
 
 ## Expresión de una función
 
+Son funciones como `variables`.
+
 ```js
 let multiplicar = function(a,b){
     console.log(a*b);
@@ -116,7 +118,45 @@ llamar(
 Son parecidas a las `lambdas` en programacion funcional. 
 ```js
 const sumar = (a,b) => a+b;
+
+const personaje = {
+    nombre: "Luis",
+    saludo: function (nombre2) {
+        console.log(`Hola, ${nombre2}! Mi nombre es ${this.nombre}`);
+    },
+    saludoArrow: (nombre2) => {
+        console.log(`Hola, ${nombre2}! Mi nombre es ${personaje.nombre}`);
+    }
+};
+
+personaje.saludo("Angel");
+personaje.saludoArrow("Angel");
 ```
+OJO: Las `funciones flecha` no cuentan con enlace léxico, es decir, no reconocen el contexto del objeto referenciado, si se las usa dentro de un método. Por esta razón, use `personaje.nombre`, en lugar de `this.nombre`.
+
+## Funciones puras e impuras
+
+**Funciones puras**
+
+Son funciones que dada una `misma input devuelve siempre el mismo output`.
+Por lo tanto, `no` se producen `efectos secundarios`. 
+
+Podemos usar el `paradigma funcional` con este tipo de funciones.
+
+```js
+function square(x){
+    return x * x;
+};
+
+function addTen (y) {
+    return y + 10;
+};
+
+const number = 5;
+const finalRes = addTen(square(number)); //Una composicion entre funciones puras, es una funcion pura. 
+console.log(finalRes);
+```
+
 ## Práctica 5: Funciones en JS
 
 **Código**

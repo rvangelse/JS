@@ -4,23 +4,13 @@
 
 //Funciones vs Metodos
 
-//Funciones como input (Callback) y como output 
-function resta (a, b){
-   return a - b;
-};
+//Funciones como output 
 
 function intercambiar (funcion, a, b){   //Funcion como input
     return funcion(b, a); //Funcion como output
 };
 
 console.log(intercambiar(resta, 5, 3));
-
-//Funciones como variables (Expresiones de funciones)
-let multiplicar = function (a, b){
-   return a * b;
-};
-
-console.log(multiplicar(2, 3));
 
 //Funciones con atributos y metodos
 function imprimirCliente () {
@@ -52,26 +42,6 @@ contar();
 
 //**************************************************************************************************************************************************************************/
 
-//Funciones puras e impuras
-
-//Funciones Puras
-
-/* Son funciones que dada un mismo input devuelve siempre el mismo output.
-   Por lo tanto, no se producen efectos secundarios. 
-   Podemos usar el paradigma funcional con este tipo de funciones. */
-
-function square(x){
-    return x * x;
-};
-
-function addTen (y) {
-    return y + 10;
-};
-
-const number = 5;
-const finalRes = addTen(square(number)); //Una composicion entre funciones puras, es una funcion pura. 
-console.log(finalRes);
-
 //Funciones Impuras
 
 /* Son funciones que producen efectos secundarios, como: 
@@ -88,28 +58,6 @@ function sum (a, b) {
 };
 
 console.log(sum(5, 3)); 
-
-//**************************************************************************************************************************************************************************/
-
-//Funciones arrow y enlace léxico 
-
-//Las funciones arrow ayudan a simplificar la sintaxis de una funcion simple // 
-
-const personaje = {
-    nombre: "Luis",
-    saludo: function (nombre2) {
-        console.log(`Hola, ${nombre2}! Mi nombre es ${this.nombre}`);
-    },
-    saludoArrow: (nombre2) => {
-        console.log(`Hola, ${nombre2}! Mi nombre es ${personaje.nombre}`);
-    }
-    /* OJO: Las funciones arrow no cuentan con enlace lexico, es decir, 
-            no reconocen el contexto del objeto referenciado, si se las usa dentro de un metodo.
-            Por esta razon, use "personaje.nombre", en lugar de "this.nombre". */
-};
-
-personaje.saludo("Angel");
-personaje.saludoArrow("Angel");
 
 //**************************************************************************************************************************************************************************/
 
