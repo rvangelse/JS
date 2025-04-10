@@ -27,12 +27,17 @@ Apuntes sobre los fundamentos de JavaScript
    - [Bucles](control.md#bucles)
    - [Práctica 4: Bucles en JS](control.md#práctica-4-bucles-en-js)
 
-4. [**Funciones y `this`**](funciones.js)  
-   - Funciones vs Metodos 
-   - Funciones puras e impuras  
-   - Funciones arrow y enlace léxico
-   - Contextos de ejecución y scope chain
-   - Closures  
+4. [**Funciones**](funciones.md)  
+   - [Declaración de funciones](funciones.md#declaración-de-funciones)
+   - [Expresión de una función](funciones.md#expresión-de-una-función)
+   - [Retorno](funciones.md#retorno)
+   - [Métodos](funciones.md#métodos)
+   - [Ambito](funciones.md#ambito)
+   - [Callback](funciones.md#callback)
+   - [Funciones flecha](funciones.md#funciones-flecha-arrow)
+   - [Closures](funciones.md#closures)
+   - [Funciones puras e impuras](funciones.md#funciones-puras-e-impuras)
+   - [Práctica 5: Funciones en JS](funciones.md#práctica-5-funciones-en-js)
 
 5. [**Programación Orientada a Objetos**](objetos.js)  
    - Anatomía de un Objeto  
