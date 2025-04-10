@@ -18,6 +18,18 @@ function sumar() {
     return suma;
 }
 console.log(sumar(1,2,3,4,5,6,7,8));
+
+//Funcion que recibe objetos
+function imprimirCliente () {
+    console.log("Mi nombre es " + this.nombre + " y tengo " + this.edad + " años")
+};
+
+const clienteA = {
+    nombre: 'Luis',
+    edad: 21,
+};
+
+imprimirCliente.call(clienteA); //El metodo call le pasa un objeto como argumento a una funcion
 ```
 OJO: Los `parámetros` son los `nombres genéricos` que le asignamos a una función al declarla, por otro lado, los `argumentos` son los `valores` que les asignamos a esos parámetros al invocar a la función.
 
@@ -93,6 +105,10 @@ console.log(numero); //4
 ```
 OJO: Evita usar `var` para declarar variables en JS, ya que su alcance es `global` o `de función entera`, lo cual puede llevar a problemas de sobrescritura o acceso no intencionado. En cambio, utiliza `let` que tiene un `alcance de bloque`, proporcionando un mayor control sobre dónde se puede acceder o modificar una variable.
 
+OJO: Se puede acceder a variables `locales` desde el contexto `global`, pero no al réves.
+
+OJO: En JS, las `{}` indican el inicio y fin de un bloque de código.
+
 ## Callback 
 Es pasar una `función como argumento` de otra función.
 
@@ -108,14 +124,20 @@ function llamar(enExito, enError) {
     }
 }
 
-//Paso dos funciones como argumentos
 llamar(
     function() { console.log('Exito'); },
     function() { console.log('Error'); }
 );
+
+//Funcíon que devuelve una nueva función
+function intercambiar (funcion, a, b){
+    return funcion(b, a); //Funcion como output
+};
+
+console.log(intercambiar(resta, 5, 3));
 ```
 ## Funciones flecha (Arrow)
-Son parecidas a las `lambdas` en programacion funcional. 
+
 ```js
 const sumar = (a,b) => a+b;
 
@@ -133,6 +155,27 @@ personaje.saludo("Angel");
 personaje.saludoArrow("Angel");
 ```
 OJO: Las `funciones flecha` no cuentan con enlace léxico, es decir, no reconocen el contexto del objeto referenciado, si se las usa dentro de un método. Por esta razón, use `personaje.nombre`, en lugar de `this.nombre`.
+
+## Closures
+
+Son funciones internas que capturan parametros del ambito local de su funcion externa.
+
+```js
+function crearCajaDeAhorros() {
+    let dinero = 0; 
+  
+    return function agregarDinero(monto) {
+      dinero += monto;
+      console.log(`Tienes ahora $${dinero} en tu caja de ahorros.`); /* Clousure "agregarDinero", captura la variable
+                                                                        "dinero". */
+    };
+  };
+  
+  const miCaja = crearCajaDeAhorros();  
+  miCaja(50);  
+  miCaja(30);  
+```
+OJO: El objetivo de usar closures es poder aislar la lógica de una función y evitar que sus variables locales sean modificadas.
 
 ## Funciones puras e impuras
 
@@ -155,6 +198,24 @@ function addTen (y) {
 const number = 5;
 const finalRes = addTen(square(number)); //Una composicion entre funciones puras, es una funcion pura. 
 console.log(finalRes);
+```
+**Funciones impuras**
+
+Son funciones que producen efectos secundarios, como: 
+   - Modificar variables globales 
+   - Modificar parametros de una funcion 
+   - Solicitudes HTTP (APIs) 
+   - Imprimir mensajes en pantalla o en consola 
+   - Manipulacion del DOM
+   - Obtener la hora o el dia actual
+
+```js
+function sum (a, b) {
+    console.log("a: " + a);
+    return a + b;
+};
+
+console.log(sum(5, 3)); 
 ```
 
 ## Práctica 5: Funciones en JS
