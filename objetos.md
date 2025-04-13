@@ -113,3 +113,28 @@ OJO: No uses clases si no las necesitas. Crear un objeto directamente puede ser 
 
 ## Herencia
 
+```js
+//Creo una función constructora para la clase Padre
+function Padre(nombre, apellido) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+}
+
+//Le añado un método saludo
+Padre.prototype.saludo = function() {
+    console.log(`Soy ${this.nombre} ${this.apellido}`);
+}
+
+
+//Creo una función constructora para la clase Hijo
+//Reutilizo el constructor de Padre para hijo
+function Hijo(nombre, apellido) {
+    Padre.call(this, nombre, apellido);
+}
+
+//Le heredo el método saludo de Padre 
+Hijo.prototype = Padre.prototype;
+```
+
+## Extender
+
