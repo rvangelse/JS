@@ -137,4 +137,24 @@ Hijo.prototype = Padre.prototype;
 ```
 
 ## Extender
+Podemos simplificar mucho más la herencia con el concepto de clases, antes mencionado.
 
+```js
+class Rectangulo {
+    constructor(alto, ancho) { 
+    this.alto = alto;
+    this.ancho = ancho;
+    }
+
+    area() {
+        return this.alto * this.ancho;
+    }
+}
+
+//Clase Cuadrado hereda los atributos y métodos de la clase Rectangulo
+class Cuadrado extends Rectangulo {
+    constructor (lado) {
+        super (lado, lado);
+    }
+}
+```
