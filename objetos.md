@@ -1,19 +1,30 @@
 # Programación orientada a objetos (POO)
+Un `objeto` es una estructura de datos que nos permite almacenar informacion de la forma `atributo - valor`
+
+En JS, todos los objetos heredan atributos y métodos del prototype `Object()`
 
 ## Contexto
-`this.` es el contexto de un objeto.
+`this.` es el contexto de un objeto, lo usamos para hacer referencia a la instancia/objeto actual.
 
 ```js
-let auto = {
-    modelo: "Modelo 3",
-    año: 2021,
-    marca: "Tesla",
-    info: function(){
-        return (`Este es un auto ${this.marca}, ${this.modelo} del año ${this.año}`);
+let personaje = {
+    nombre: "John",
+    edad: 25,
+    arma: "Escopeta",
+    mostrarInformacion: function(){//Esto es un método, una función que nos permite interactuar con el objeto
+        console.log("Nombre: " + this.nombre);
+        console.log("Edad: " + this.edad);
+        console.log("Arma: " + this.arma);
     }
-}
+};
 
-console.log(auto.info());
+personaje.mostrarInformacion();
+
+personaje.elemento = "fuego"; //Agrego un nuevo atributo al objeto "personaje", tambien se puede agregar métodos, de esta forma
+console.log(personaje.elemento); 
+
+delete personaje.elemento; //Asi se borran atributos/metodos
+console.log(personaje);  
 ```
 ## Getter y Setter
 En JS, puedes existen palabras reservadas que te permitirán construir los getters y setters de tus objetos.

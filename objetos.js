@@ -2,32 +2,7 @@
 
 //**************************************************************************************************************************************************************************/
 
-//Anatomía de un Objeto
-
-//Un Objeto es una estructura de datos que nos permite almacenar informacion de la forma "atributo - valor"
-
-let personaje = {
-    nombre: "John",
-    edad: 25,
-    arma: "Escopeta",
-    mostrarInformacion: function(){   //Esto es un metodo, una funcion que permite interactuar con el objeto
-        console.log("Nombre: " + this.nombre);
-        console.log("Edad: " + this.edad); //OJO: Para hacer referencia a la instancia/objeto actual usamos el "this." 
-        console.log("Arma: " + this.arma);
-    }
-};
-
-personaje.mostrarInformacion();
-
-personaje.elemento = "fuego"; //Agrego un nuevo atributo al objeto "personaje", tambien se pueden agregar metodos asi
-console.log(personaje.elemento); 
-
-delete personaje.elemento; //Asi se borran atributos/metodos
-console.log(personaje);  
-
-//**************************************************************************************************************************************************************************/
-
-//Función constructora (Es una función que se utiliza para crear objetos nuevos)
+//Función constructora
 
 function persona (nombre, apellido, edad){
     this.nombre = nombre;
@@ -137,7 +112,7 @@ const baseDeDatos = [
   const posts = [
     {
       usuario: "Angel",
-      post: "Me encata Javascript!",
+      post: "Me encanta Javascript!",
     },
     {
       usuario: "Andres",
