@@ -39,12 +39,16 @@ Apuntes sobre los fundamentos de JavaScript
    - [Funciones puras e impuras](funciones.md#funciones-puras-e-impuras)
    - [Práctica 5: Funciones en JS](funciones.md#práctica-5-funciones-en-js)
 
-5. [**Programación Orientada a Objetos**](objetos.js)  
-   - Anatomía de un Objeto  
-   - Función constructora
-   - ¿Qué es una clase?
-   - Herencia en la práctica
-   - Prototipos en la practica 
+5. [**Programación Orientada a Objetos**](objetos.md)  
+   - [Contexto](objetos.md#contexto)  
+   - [Getter y Setter](objetos.md#getter-y-setter)
+   - [Vinculación](objetos.md#vinculación)
+   - [Constructores](objetos.md#constructores)
+   - [Clases](objetos.md#clases)
+   - [Herencia](objetos.md#herencia)
+   - [Extender](objetos.md#extender})
+   - [Práctica 6: Objetos en JS](objetos.md#práctica-6-objetos-en-js)
+   - [Práctica 7: Red Social](objetos.md#práctica-7-red-social)
 
 6. [**Asincronía en JavaScript**](asincronia/asincronia.js)  
    - Promesas en JavaScript  
