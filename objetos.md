@@ -208,7 +208,7 @@ console.log(biciMontaña.mostrarDetalles());
 **Output**
 
 <p align="center">
-  <img src="imagenes/grafico6.png" width="800">
+  <img src="imagenes/grafico6.png" width="500">
 </p>
 
 ## Práctica 7: Red Social 
@@ -279,5 +279,5 @@ const baseDeDatos = [
   **Output**
 
 <p align="center">
-  <img src="imagenes/grafico7.png" width="800">
+  <img src="imagenes/grafico7.png" width="500">
 </p>

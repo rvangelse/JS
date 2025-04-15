@@ -243,5 +243,5 @@ enviarFormulario (nombre, email, mensaje);
 **Output**
 
 <p align="center">
-  <img src="imagenes/grafico5.png" width="800">
+  <img src="imagenes/grafico5.png" width="500">
 </p>
