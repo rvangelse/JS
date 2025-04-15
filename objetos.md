@@ -70,17 +70,7 @@ Son funciones que te permiten crear nuevos objetos, a partir de ellas.
 
 ```js
 function Perro(nombre) {
-    this.nombre = nombre;
-}
-new Perro('Firulais');
-```
-OJO: Cuando utilices 'new' en JavaScript, asegúrate de que estás invocando una función constructora.
-
-## Prototype
-Es lo que tienen en común todas las instancias de una clase, es muy útil al momento de asignar propiedades o métodos que serán constantes.
-
-```js
-function Auto(modelo, año, marca) {
+    this.nombre = nombre;    
     this.modelo = modelo;
     this.año = año;
     this.marca = marca;
@@ -122,6 +112,7 @@ console.log(auto2.info());
 ```
 OJO: No uses clases si no las necesitas. Crear un objeto directamente puede ser más eficiente y simple.
 
+OJO: Las `clases/funciones constructoras` son las únicas que generan prototipos. Un prototipo es la "herencia" en si. 
 ## Herencia
 
 ```js
@@ -151,21 +142,142 @@ Hijo.prototype = Padre.prototype;
 Podemos simplificar mucho más la herencia con el concepto de clases, antes mencionado.
 
 ```js
-class Rectangulo {
-    constructor(alto, ancho) { 
-    this.alto = alto;
-    this.ancho = ancho;
-    }
+class Animal {
+    constructor(nombre, tipo){
+        this.nombre = nombre;
+        this.tipo = tipo;
+    };
+    emitirSonido(){
+        console.log("El animal emite un sonido");
+    };
+};
 
-    area() {
-        return this.alto * this.ancho;
-    }
-}
+class Perro extends Animal {
+    constructor(nombre, tipo, raza){
+        super(nombre, tipo); //Estoy usando el constructor heredado de la clase padre "Animal"
+        this.raza = raza;
+    };
+    emitirSonido(){  //Sobreescribo el metodo heredado de la clase padre "Animal"
+        console.log("El perro ladra");
+    };
+};
 
-//Clase Cuadrado hereda los atributos y métodos de la clase Rectangulo
-class Cuadrado extends Rectangulo {
-    constructor (lado) {
-        super (lado, lado);
-    }
-}
+const perro = new Perro("Buddy", "Canino", "Golden Retriever");
+console.log(perro);
+perro.emitirSonido();
 ```
+## Práctica 6: Objetos en JS
+
+**Código**
+```js
+class vehiculo {
+    constructor(cantRuedas){
+        this.cantRuedas = cantRuedas;
+    }
+    mostrarDetalles(){
+        return `Este vehículo tiene ${this.cantRuedas} ruedas.`;
+    }
+}
+
+class auto extends vehiculo {
+    constructor(capacidad){
+        super(4);
+        this.capacidad = capacidad;
+    }
+    mostrarDetalles(){
+        return super.mostrarDetalles() + ` Puede transportar ${this.capacidad} pasajeros.`;
+    }
+}
+
+class bicicleta extends vehiculo {
+    constructor(tipo){
+        super(2);
+        this.tipo = tipo;
+    }
+    mostrarDetalles(){
+        return super.mostrarDetalles() + ` Es una bicicleta de tipo ${this.tipo}.`;
+    }
+}
+
+let auto5 = new auto(5);
+let biciMontaña = new bicicleta("Montaña");
+
+console.log(auto5.mostrarDetalles());
+console.log(biciMontaña.mostrarDetalles());
+```
+**Output**
+
+<p align="center">
+  <img src="imagenes/grafico6.png" width="800">
+</p>
+
+## Práctica 7: Red Social 
+
+**Código**
+```js
+/* Requerimientos del reto:
+
+1. El usuario debe poder ingresar su usuario y contraseña
+2. El sistema debe ser capaz de validar si el usuario y contraseña ingresados por el usuario existen en la base de datos
+3. Si el usuario y contraseña son correctos, el sistema debe mostrar un mensaje de bienvenida y mostrar el timeline del usuario.
+4. Si el usuario y contraseña son incorrectos, el sistema debe mostrar un mensaje de error y no mostrar ningun timeline. */
+
+//Defino un array de objetos que usare como base de datos
+const baseDeDatos = [
+    {
+      usuario: "rvangelse",
+      contraseña: "123",
+    },
+    {
+      usuario: "jdoe",
+      contraseña: "456",
+    }
+  ];
+
+//Defino otro array de objetos que usare como linea de tiempo
+  const posts = [
+    {
+      usuario: "Angel",
+      post: "Me encanta Javascript!",
+    },
+    {
+      usuario: "Andres",
+      post: "No quiero trabajar",
+    }
+  ];
+
+  //OJO: Use este comando "npm install prompt-sync" para instalar el paquete que me permitio agregar inputs.
+  const input = require("prompt-sync")({ sigint: true });
+
+  const usuario = input("Usuario: ");
+  const contraseña = input("Contraseña: ");
+  
+  //Funcion que verifica si un usuario y contraseña existen en la base de datos
+  function usuarioExistente(usuario, contraseña) {
+    for (let i = 0; i < baseDeDatos.length; i++) {
+      if (
+        baseDeDatos[i].usuario === usuario &&
+        baseDeDatos[i].contraseña === contraseña
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  function inicioSesion(usuario, contraseña) {
+    if (usuarioExistente(usuario, contraseña)) {
+      console.log(`¡Bienvenido a tu cuenta ${usuario}!`);
+      console.log(posts);
+    } else {
+      console.log("Usuario o contraseña incorrectos!");
+    }
+  }
+  
+  inicioSesion(usuario, contraseña);
+  ```
+  **Output**
+
+<p align="center">
+  <img src="imagenes/grafico7.png" width="800">
+</p>
