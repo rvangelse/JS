@@ -42,9 +42,7 @@ import * as todo from './export.js';
 console.log(todo.sumar(4,5));
 console.log(todo.Servicio);
 ```
-OJO: Al importar módulos y correrlos con node, debes crear un archivo.json.
-
-Para esto usa el siguiente comando, en tu carpeta principal:
+OJO: Al importar módulos y correrlos con `NodeJS`, debes crear un `archivo.json`. Para esto usa el siguiente comando, en tu carpeta principal:
 ```sh
     npm init
 ```
