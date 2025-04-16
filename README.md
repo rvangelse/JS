@@ -50,7 +50,12 @@ Apuntes sobre los fundamentos de JavaScript
    - [Práctica 6: Objetos en JS](objetos.md#práctica-6-objetos-en-js)
    - [Práctica 7: Red Social](objetos.md#práctica-7-red-social)
 
-6. [**Asincronía en JavaScript**](asincronia/asincronia.js)  
+6. [**Módulos**](modulos.md)
+   - [Exportar](modulos.md#exportar)
+   - [Importar](modulos.md#importar)
+   - [Práctica 8: Módulos](modulos.md#pŕactica-8-módulos-en-js)
+
+7. [**Asincronía en JavaScript**](asincronia/asincronia.js)  
    - Promesas en JavaScript  
    - Usando `async` y `await` en JavaScript  
    - `For await of`
