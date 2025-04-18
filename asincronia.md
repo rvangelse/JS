@@ -165,7 +165,7 @@ function divide(a, b) {
     }
 }
 ```
-## Fetch WebAPI
+## Fetch Web API
 Permite hacer peticiones HTTPs, funciona solo en navegadores(web). Existen bibliotecas de JS como `axios`, compatibles con `NodeJS`.
 
 ```js
