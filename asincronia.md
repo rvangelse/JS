@@ -1,5 +1,21 @@
 # Asincronía
 
+**¿Cómo funciona el JavaScript Engine?**
+
+JS Engine se divide en 2 partes:
+
+* **Memory Heap:** Es donde se almacenan las variables, funciones, objetos, etc. que creamos. 
+  
+* **Call Stack:** Es la pila donde se guardan cada una de las funciones que debemos ejecutar cuando corremos nuestro programa. 
+   
+JS funciona de forma sincrona, ejecuta una tarea a la vez, es decir, desapila las tareas una por una. 
+
+Pero, existen formas de hacer que funcione de forma **asincrona** (Esperar un temporizador, hacer una petición HTTP, etc.), 
+utilizando **Web APIs**.
+
+Estas Web APIs permiten delegar tareas fuera del JS Engine. Una vez que la tarea asíncrona termina, su callback se coloca en la **Task Queue** (cola de tareas).
+El **Event Loop** es el encargado de verificar si la Call Stack está vacía y, en ese caso, mover tareas desde la Task Queue a la Call Stack para que puedan ejecutarse.
+
 ## Temporizador: setTimeout
 
 ```js
@@ -43,8 +59,30 @@ OJO: Asegúrate de siempre desactivar el temporizador con `clearInterval` una ve
 
 ## Promesas
 
+Una promesa es un objeto que representa la eventual finalización (o falla) de una operación asíncrona.
+
+Tienen 3 estados: 
+   - **Pending:** La promesa aun no ha sido resuelta o rechazada.
+   - **Fulfilled:** La promesa ha sido resuelta con un valor.
+   - **Rejected:** La promesa ha sido rechazada con un error. 
 ```js
-//La promesa siempre tendrá 2 opciones resolve o reject
+//Ejemplos, simulando una petición:
+
+//Ejemplo 1:
+const promesa = new Promise((resolve, reject) => {
+    setTimeout(() => { 
+        if(Math.random() > 0.5){
+            resolve("Promesa resuelta con éxito"); 
+        } else {
+            reject("Promesa rechazada por error"); 
+        }
+    }, 2000);
+});
+
+promesa.then((successMessage) => {console.log(successMessage);}); 
+promesa.catch((errorMessage) => {console.log(errorMessage);}); 
+
+//Ejemplo 2: 
 //En este caso, resuelve (reciboDatos)
 let promesa = new Promise((reciboDatos, noReciboDatos) => {
     setTimeout(()=>{
@@ -106,20 +144,6 @@ async function asincrona() {
 
 asincrona();
 ```
-## Fetch Web API
-Permite hacer peticiones HTTPs, funciona solo en navegadores(web). Existen bibliotecas de JS como `axios`, compatibles con `NodeJS`.
-
-```js
-const url = 'https://jsonplaceholder.typicode.com/users/1';
-
-fetch(url) //Realizo la petición HTTP al url
-
-//Si la promesa se resuelve:
-    .then(response => response.json()) //Transformo la respuesta en .json
-    .then(data => console.log(data.name)) //Proceso la respuesta
-//Si no:
-    .catch(error => console.error(error));
-```
 ## Errores
 
 ```js
@@ -141,6 +165,65 @@ function divide(a, b) {
     }
 }
 ```
+## Fetch Web API
+Permite hacer peticiones HTTPs, funciona solo en navegadores(web). Existen bibliotecas de JS como `axios`, compatibles con `NodeJS`.
+
+```js
+const url = 'https://jsonplaceholder.typicode.com/users/1';
+
+fetch(url) //Realizo la petición HTTP al url
+
+//Si la promesa se resuelve:
+    .then(response => response.json()) //Transformo la respuesta en .json
+    .then(data => console.log(data.name)) //Proceso la respuesta
+//Si no:
+    .catch(error => console.error(error));
+
+//Ejemplo usando fetch(), de forma asincrona:
+async function reciboDatosAPI(){
+    try { 
+        const response = await fetch( "https://rickandmortyapi.com/api/character"); 
+        const data = await response.json(); 
+        console.log(data); 
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+reciboDatosAPI();
+
+//For await of (Sirve para hacer mas de una peticion de forma asincrona)
+
+const urls = ["https://rickandmortyapi.com/api/character", 
+              "https://rickandmortyapi.com/api/location",
+              "https://rickandmortyapi.com/api/episode"];
+
+async function reciboMultiplesDatosAPI(){
+    try {
+        for await (let url of urls) {
+          let response = await fetch(url);
+          let data = await response.json();
+          console.log(data);
+        }
+    } catch (error){
+        console.log(error);
+    }
+}
+
+reciboMultiplesDatosAPI();
+```
+## HTTP (Hypertext Transfer Protocol)
+
+**Verbos de HTTP:**
+
+* **GET** (Obtener informacion)
+
+* **POST** (Toma la informacion y la comparte)
+
+* **PATCH** y **PUT** (Actualiza la informacion que ya existe)
+
+* **Delete** (Borra la informacion)
+
 ## Práctica 9: Asincronía en JS
 
 **Código**

@@ -55,7 +55,7 @@ Apuntes sobre los fundamentos de JavaScript
    - [Importar](modulos.md#importar)
    - [Práctica 8: Módulos](modulos.md#pŕactica-8-módulos-en-js)
 
-7. [**Asincronía en JavaScript**](asincronia/asincronia.js)  
+7. [**Asincronía en JavaScript**](asincronia.md)  
    - Promesas en JavaScript  
    - Usando `async` y `await` en JavaScript  
    - `For await of`
