@@ -60,7 +60,9 @@ Apuntes sobre los fundamentos de JavaScript
    - [Promesas](asincronia.md#promesas) 
    - [Funciones async](asincronia.md#funciones-async)
    - [Manejo de errores](asincronia.md#manejo-de-errores)
-   - [Fetch WebAPI]()
+   - [Fetch WebAPI](asincronia.md#fetch-webapi)
+   - [HTTP](asincronia.md#http-hypertext-transfer-protocol)
+   - [Práctica 9: Asincronía en JS](asincronia.md#práctica-9-asincronía-en-js)
 
 ## Cómo usar este repositorio
 
