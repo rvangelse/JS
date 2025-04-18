@@ -56,10 +56,11 @@ Apuntes sobre los fundamentos de JavaScript
    - [Práctica 8: Módulos](modulos.md#pŕactica-8-módulos-en-js)
 
 7. [**Asincronía en JavaScript**](asincronia.md)  
-   - Promesas en JavaScript  
-   - Usando `async` y `await` en JavaScript  
-   - `For await of`
-   - Peticiones HTTP y metodos `GET`, `POST` y `DELETE`
+   - [Temporizadores](asincronia.md#temporizadores) 
+   - [Promesas](asincronia.md#promesas) 
+   - [Funciones async](asincronia.md#funciones-async)
+   - [Manejo de errores](asincronia.md#manejo-de-errores)
+   - [Fetch WebAPI]()
 
 ## Cómo usar este repositorio
 
