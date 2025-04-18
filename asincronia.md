@@ -16,8 +16,9 @@ utilizando **Web APIs**.
 Estas Web APIs permiten delegar tareas fuera del JS Engine. Una vez que la tarea asíncrona termina, su callback se coloca en la **Task Queue** (cola de tareas).
 El **Event Loop** es el encargado de verificar si la Call Stack está vacía y, en ese caso, mover tareas desde la Task Queue a la Call Stack para que puedan ejecutarse.
 
-## Temporizador: setTimeout
+## Temporizadores
 
+### Temporizador: setTimeout
 ```js
 //Se ejecuta en t = 1
 console.log('antes');
@@ -36,8 +37,7 @@ clearTimeout(timeout);
 ```
 OJO: `setTimeout` no garantiza la ejecución de tu código, despues de un tiempo exacto, simplemente pone tu código en una cola para ser ejecutado después del tiempo establecido. Si hay otras funciones en la cola, `setTimeout` tendrá que esperar su turno, lo cual podría resultar en un retraso.
 
-## Temporizador: setInterval
-
+### Temporizador: setInterval
 ```js
 let i = 0;
 console.log('antes');
@@ -105,7 +105,7 @@ promesa
 //Esto se ejecutará antes que la promesa
 console.log('Quiero ejecutar lo más pronto posible');
 ```
-## Múltiples promesas
+### Múltiples promesas
 
 ```js
 let promesa1 = new Promise((reciboDatos, noReciboDatos) => {
@@ -127,7 +127,7 @@ Promise.all([promesa1, promesa2])
 ```
 OJO: `Promise.all()` no se ejecuta hasta que todas las promesas se procesen.
 
-## Función async
+## Funciones async
 Es una forma óptima de trabajar con promesas, soluciona el tener muchos `.then()` anidados.
 
 ```js
@@ -144,7 +144,7 @@ async function asincrona() {
 
 asincrona();
 ```
-## Errores
+## Manejo de errores
 
 ```js
 try { //Código que intentaremos ejecutar
