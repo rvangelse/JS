@@ -38,5 +38,8 @@ class Rocola {
 }
 
 let rocola = new Rocola();
-console.log(rocola.play(2), rocola.cola, rocola.canciones);
-console.log(rocola.play(2), rocola.cola, rocola.canciones);
+console.log(rocola.play(2));
+console.log(rocola.play(2));
+console.log(rocola.play(2));
+console.log(rocola.play(2));
+console.log(rocola.play(2));

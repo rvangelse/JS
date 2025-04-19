@@ -64,6 +64,9 @@ Apuntes sobre los fundamentos de JavaScript
    - [HTTP](asincronia.md#http-hypertext-transfer-protocol)
    - [Práctica 9: Asincronía en JS](asincronia.md#práctica-9-asincronía-en-js)
 
+8. [**Contenido Extra:**]
+   - [Reto: Rocola](practicas/rocola.js)
+
 ## Cómo usar este repositorio
 
 Cada tema cuenta con ejemplos prácticos y explicaciones detalladas. Puedes clonar el repositorio y ejecutar los archivos en tu navegador o entorno de desarrollo favorito.
