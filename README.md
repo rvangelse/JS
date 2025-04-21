@@ -77,6 +77,8 @@ Apuntes sobre los fundamentos de JavaScript
 9. [**Contenido Extra**](extra.md)
    - [Reto: Rocola](extra.md#reto-rocola)
 
+10. [**Preguntas tipo Entrevista**](preguntas.md)
+
 ## Cómo usar este repositorio
 
 Cada tema cuenta con ejemplos prácticos y explicaciones detalladas. Puedes clonar el repositorio y ejecutar los archivos en tu navegador o entorno de desarrollo favorito.
