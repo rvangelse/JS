@@ -64,8 +64,13 @@ Apuntes sobre los fundamentos de JavaScript
    - [HTTP](asincronia.md#http-hypertext-transfer-protocol)
    - [Práctica 9: Asincronía en JS](asincronia.md#práctica-9-asincronía-en-js)
 
-8. [**Patrones de diseño**] (patrones.md)
-   - []
+8. [**Patrones de diseño**](patrones.md)
+   - [Constructor](patrones.md#constructor)
+   - [Singleton](patrones.md#singleton)
+   - [Proxy](patrones.md#proxy)
+   - [Prototipo](patrones.md#prototipo)
+   - [Módulo](patrones.md#módulo)
+   - [Mezcla o Composición](patrones.md#mezcla)
 
 9. [**Contenido Extra**](extra.md)
    - [Reto: Rocola](extra.md#reto-rocola)

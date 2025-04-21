@@ -150,7 +150,7 @@ modulo.removerDuplicados([1, 2, 3, 3, 3, 4]);
 ```
 OJO: Es una forma más optima que la que vimos antes para usar módulos en JS. Nos evita lo de usar .json y la colisión de nombres.
 
-## Mezcla
+## Mezcla o Composición
 
 Permite reutilizar funcionalidades, sin usar herencia. 
 
