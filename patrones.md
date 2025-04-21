@@ -208,3 +208,36 @@ const conductor2 = new Conductor('Ayrton Sena', servicio);
 conductor1.enviar('Estoy disponible');
 conductor2.enviar('Estoy ocupado');
 ```
+## Práctica 10: Patrones de diseño en JS
+
+**Código**
+
+```js
+// Definición del módulo de usuarios
+
+const usuarios = [];
+
+// Función para agregar un usuario al módulo
+export function agregar(nombre) {
+    usuarios.push(nombre);
+    console.log(`Usuario '${nombre}' agregado.`);
+}
+
+// Función para mostrar todos los usuarios en el módulo
+export function mostrar() {
+    console.log('Lista de usuarios:');
+    usuarios.forEach(usuario => console.log(usuario));
+}
+```
+```js
+import * as usuarios from "./usuarios.mjs";
+
+usuarios.agregar('Juan');
+usuarios.agregar('María');
+usuarios.mostrar();
+```
+**Output**
+
+<p align="center">
+  <img src="imagenes/grafico11.png" width="600">
+</p>
