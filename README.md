@@ -70,7 +70,9 @@ Apuntes sobre los fundamentos de JavaScript
    - [Proxy](patrones.md#proxy)
    - [Prototipo](patrones.md#prototipo)
    - [Módulo](patrones.md#módulo)
-   - [Mezcla o Composición](patrones.md#mezcla)
+   - [Mezcla o Composición](patrones.md#mezcla-o-composición)
+   - [Mediador](patrones.md#mediador)
+   - [Práctica 10: Patrones de diseño en JS](patrones.md#práctica-10-patrones-de-diseño-en-js)
 
 9. [**Contenido Extra**](extra.md)
    - [Reto: Rocola](extra.md#reto-rocola)
