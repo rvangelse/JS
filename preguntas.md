@@ -5,9 +5,9 @@
 
     Ejemplo: 
 
-        ```js
-        let numero = 5;
-        ```
+    ```js
+    let numero = 5;
+    ```
 - **¿Qué diferencia hay entre == y === en JS?**
 
     `==`compara igualdad de valores, mientras que `===`compara igualdad de valores y tipos.
@@ -18,20 +18,20 @@
 
     Ejemplo:
 
-        ```js
-        function miFuncion(){
+    ```js
+    function miFuncion(){
 
-        }
-        ```
+    }
+    ```
 - **¿Qué es una función de flecha o arrow function?**
 
     Una forma más corta de escribir funciones. 
 
     Ejemplo: 
 
-        ```js
-        const miFuncion = ()=>{...}
-        ```
+    ```js
+    const miFuncion = ()=>{...}
+    ```
 - **¿Qué es una promesa en JS?**
 
     Un objeto que representa la finalización o el fracaso de una operación asíncrona.
@@ -50,11 +50,11 @@
 
     Ejemplo:
 
-        ```js
-        let miObjeto = {
-            clave: 'valor'
-        };
-        ```
+    ```js
+    let miObjeto = {
+        clave: 'valor'
+    };
+    ```
 - **¿Cómo se itera sobre un array en JS?**
 
     Usando métodos como `for`, `forEach`, `for...of`.
@@ -111,18 +111,18 @@
 
     Ejemplo:
 
-        ```js
-        let regex = /abc/;
-        ```
+    ```js
+    let regex = /abc/;
+    ```
 - **¿Qué es el operador ternario?**
 
     Un operador que toma tres operandos. 
 
     Ejemplo: 
 
-        ```js
-        condición ? expr1 :expr2;
-        ```
+    ```js
+    condición ? expr1 :expr2;
+    ```
 
 
 
