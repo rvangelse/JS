@@ -46,7 +46,7 @@ Apuntes sobre los fundamentos de JavaScript
    - [Constructores](objetos.md#constructores)
    - [Clases](objetos.md#clases)
    - [Herencia](objetos.md#herencia)
-   - [Extender](objetos.md#extender})
+   - [Extender](objetos.md#extender)
    - [Práctica 6: Objetos en JS](objetos.md#práctica-6-objetos-en-js)
    - [Práctica 7: Red Social](objetos.md#práctica-7-red-social)
 
